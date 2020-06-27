@@ -17,3 +17,7 @@ Imports:
     purrr,
     fasterize
 RoxygenNote: 7.1.0
+Suggests: 
+    testthat
+Depends: 
+    R (>= 2.10)

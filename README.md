@@ -12,67 +12,18 @@ Utility functions for processing spatial data.
 The package can be installed from github:
 
 ``` r
-# install.packages("devtools)
-# devtools::install_github("matthewjwhittle/spatialutils")
+install.packages("devtools)
+devtools::install_github("matthewjwhittle/spatialutils")
+```
+
+Load other packages:
+
+``` r
 library(spatialutils)
-```
-
-    ## Warning: replacing previous import 'dplyr::select' by 'raster::select' when
-    ## loading 'spatialutils'
-
-    ## Warning: replacing previous import 'dplyr::intersect' by 'raster::intersect'
-    ## when loading 'spatialutils'
-
-    ## Warning: replacing previous import 'dplyr::union' by 'raster::union' when
-    ## loading 'spatialutils'
-
-``` r
 library(tidyverse)
-```
-
-    ## ── Attaching packages ──────────────────────────────────────────────── tidyverse 1.2.1 ──
-
-    ## ✓ ggplot2 3.2.0     ✓ purrr   0.3.4
-    ## ✓ tibble  3.0.1     ✓ dplyr   1.0.0
-    ## ✓ tidyr   1.0.0     ✓ stringr 1.4.0
-    ## ✓ readr   1.3.1     ✓ forcats 0.4.0
-
-    ## Warning: package 'tibble' was built under R version 3.6.2
-
-    ## Warning: package 'purrr' was built under R version 3.6.2
-
-    ## Warning: package 'dplyr' was built under R version 3.6.2
-
-    ## ── Conflicts ─────────────────────────────────────────────────── tidyverse_conflicts() ──
-    ## x dplyr::filter() masks stats::filter()
-    ## x dplyr::lag()    masks stats::lag()
-
-``` r
 library(sf)
-```
-
-    ## Warning: package 'sf' was built under R version 3.6.2
-
-    ## Linking to GEOS 3.7.2, GDAL 2.4.2, PROJ 5.2.0
-
-``` r
 library(raster)
 ```
-
-    ## Loading required package: sp
-
-    ## Warning: package 'sp' was built under R version 3.6.2
-
-    ## 
-    ## Attaching package: 'raster'
-
-    ## The following object is masked from 'package:dplyr':
-    ## 
-    ##     select
-
-    ## The following object is masked from 'package:tidyr':
-    ## 
-    ##     extract
 
 # Examples
 
@@ -102,7 +53,7 @@ print(points)
 plot(points)
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
 # Generating Random Points
 
@@ -121,7 +72,7 @@ plot(st_as_sfc(bbox)) # Convert the bounding box to sfc for plotting
 plot(sample_points, add =TRUE, col = "blue")
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
 # Getting raster of the coverage
 
@@ -131,7 +82,7 @@ buffers <- st_buffer(sample_points, 100)
 plot(buffers)
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
 ``` r
 # Create a model raster with a 100m resolution
@@ -145,4 +96,4 @@ plot(cover_raster)
 plot(buffers, add = T)
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-4-2.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-5-2.png)<!-- -->

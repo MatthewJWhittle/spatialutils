@@ -14,9 +14,13 @@ Utility functions for processing spatial data.
 
 # Installation
 The package can be installed from github:
-```{r}
-# install.packages("devtools)
-# devtools::install_github("matthewjwhittle/spatialutils")
+```{r eval=FALSE}
+install.packages("devtools)
+devtools::install_github("matthewjwhittle/spatialutils")
+```
+
+Load other packages:
+```{r warning=FALSE, message=FALSE}
 library(spatialutils)
 library(tidyverse)
 library(sf)

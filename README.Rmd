@@ -2,7 +2,7 @@
 title: "README"
 author: "Matthew Whittle"
 date: "27/06/2020"
-output: html_document
+output: github_document
 ---
 
 ```{r setup, include=FALSE}

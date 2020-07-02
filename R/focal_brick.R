@@ -10,7 +10,6 @@
 #' @import purrr
 #' @importFrom magrittr %>%
 #' @export focal_brick
-
 focal_brick <-
   function(brick, window, fun = mean) {
     # Get the layer names to rename the output

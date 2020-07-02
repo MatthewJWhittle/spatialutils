@@ -9,6 +9,7 @@
 #' @import raster
 #' @import purrr
 #' @importFrom magrittr %>%
+#' @export focal_brick
 
 focal_brick <-
   function(brick, window, fun = mean) {

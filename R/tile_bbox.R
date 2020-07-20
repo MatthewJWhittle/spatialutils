@@ -11,6 +11,7 @@
 #' @importFrom magrittr %>%
 #' @import sf
 #' @importFrom purrr map
+#' @export tile_bbox
 # require(tidyverse)
 # require(sf)
 # bbox <- xy_to_points() %>% st_buffer(100) %>% st_bbox()

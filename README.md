@@ -1,9 +1,5 @@
-README
+spatialutils
 ================
-Matthew Whittle
-27/06/2020
-
-# spatialutils
 
 Utility functions for processing spatial data.
 
